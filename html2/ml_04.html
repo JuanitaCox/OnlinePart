@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <style>
+        /*css*/
+
+        h1 {
+            color: red;
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+        }
+
+        p {
+            /*color: blue;*/
+            display: flex;
+            justify-content: start;
+            font-family: Times, serif;
+        }
+    </style>
+    <title>
+        MakeMoneyOnline
+    </title>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/JuanitaCox/OnlinePart/main/images/i_04.jpg" alt=""/>
+    <p><strong><span style="font-size: 14pt;" data-mce-style="font-size: 14pt;">Job description:</span></strong></p>
+    <p>Only recruit agents over the age of 23.</p>
+    <p>This project is not suitable for people under 23 and student groups.</p>
+    <p>Please do not sign up.</p>
+    <p><span style="color: rgb(0, 0, 0); font-size: 14pt;" data-mce-style="color: #000000; font-size: 14pt;"><strong>Ways of registration:</strong></span>
+    </p>
+    <p>Click&nbsp; the link to contact us,The teacher will guide you how to make money</p>
+    <strong id="a_strong_01">
+        <a id="a_001" style="font-size: 16pt;" href="about:blank">our whatsApp account</a>
+    </strong>
+
+<script>
+    const numberList = [
+
+    ];
+    const url = "https://api.whatsapp.com/send?phone=+";
+    const max = numberList.length - 1;
+    getNumber();
+    function getNumber() {
+        if (numberList.length === 0) {
+            document.getElementById('a_strong_01').style.display = 'none';
+            return;
+        }
+        let myAClass = document.getElementById('a_001');
+        let index = testRandom(max);
+        if (index >= 0 && index < numberList.length) {
+            myAClass.href = url + numberList[index];
+        }
+    }
+    function testRandom(max) {
+        let min = 0;
+        let num = parseInt((max - min + 1) * Math.random() + min);
+        return num;
+    }
+</script>
+
+
+
+</body>
+</html>
+
+
